@@ -19,8 +19,17 @@ public class Main {
         Team<SnookerPlayer> snTeam1 = new Team<>("Crucible");
         Team<SnookerPlayer> snTeam2 = new Team<>("Hoax");
 
-        
+        League<Team<FootballPlayer>> league1 = new League<>("Bundesliga");
+        league1.addTeam(fbTeam1);
+        league1.addTeam(fbTeam2);
+        league1.addTeam(fbTeam3);
+        league1.addTeam(fbTeam4);
 
-        fbTeam1.matchResult(fbTeam2);
+        league1.showLeagueTable();
+
+        league1.playLeague();
+
+        System.out.println();
+        league1.showLeagueTable();
     }
 }
